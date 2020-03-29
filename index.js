@@ -1,15 +1,8 @@
-// const CronJob = require("cron").CronJob
+const CronJob = require("cron").CronJob
 
-// const job = new CronJob(
-//   "* * * * * *",
-//   function() {
-//     console.log("You will see this message every second")
-//   },
-//   null,
-//   true,
-// )
+const job = new CronJob("0 8 * * *", main, null, true)
 
-// job.start()
+job.start()
 
 const { getDatabaseSchemas } = require("./postgres-helper")
 const { GgSheet } = require("./gg-sheets-utils")
@@ -22,23 +15,55 @@ async function main() {
   const sheet = await doc.getSheet()
   const rows = await sheet.getRows()
 
-  const promisesList = []
   if (rows.length === 0) {
     await sheet.addRows(schemas)
-  } else {
-    schemas.forEach(async (v, i) => {
-      if (i < rows.length) {
-        Object.keys(v).forEach(k => {
-          rows[i][k] = schemas[i][k]
-        })
-        promisesList.push(rows[i].save())
-      } else {
-        promisesList.push(sheet.addRow(schemas[i]))
-      }
-    })
+    return
   }
 
-  await Promise.all(promisesList)
-}
+  if (schemas.length === rows.length) {
+    const promisesList = []
+    schemas.forEach((v, i) => {
+      Object.keys(v).forEach(k => {
+        rows[i][k] = schemas[i][k]
+      })
+      promisesList.push(rows[i].save())
+    })
 
-main()
+    await Promise.all(promisesList)
+    return
+  }
+
+  if (schemas.length < rows.length) {
+    const promisesList = []
+    schemas.forEach((v, i) => {
+      Object.keys(v).forEach(k => {
+        rows[i][k] = schemas[i][k]
+      })
+      promisesList.push(rows[i].save())
+    })
+
+    for (let i = schemas.length; i < rows.length; i++) {
+      promisesList.push(rows[i].delete())
+    }
+
+    await Promise.all(promisesList)
+    return
+  }
+
+  if (schemas.length > rows.length) {
+    const promisesList = []
+    schemas.forEach((v, i) => {
+      Object.keys(v).forEach(k => {
+        rows[i][k] = schemas[i][k]
+      })
+      promisesList.push(rows[i].save())
+    })
+
+    for (let i = rows.length; i < schema.length; i++) {
+      promisesList.push(sheet.addRow(schemas[i]))
+    }
+
+    await Promise.all(promisesList)
+    return
+  }
+}

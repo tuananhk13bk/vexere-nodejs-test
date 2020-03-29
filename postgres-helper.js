@@ -13,7 +13,13 @@ async function getDatabaseSchemas(dbName) {
     await client.connect()
 
     const res = await client.query(`SELECT
-	*
+	table_schema,
+	table_name,
+	column_name,
+	ordinal_position,
+	column_default,
+	is_nullable,
+	data_type
 FROM
 	information_schema. "columns"
 WHERE
