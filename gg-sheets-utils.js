@@ -13,9 +13,7 @@ async function accessSpreadSheet() {
 
   const sheet = doc.sheetsByIndex[0]
 
-  await sheet.addRow({ Name: "ahihi", Age: 22, Gender: "Female" })
-
-  const rows = await sheet.getRows()
+  console.log(sheet.getTitle())
 }
 
 accessSpreadSheet()

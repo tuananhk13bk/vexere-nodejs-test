@@ -23,13 +23,15 @@ FROM
 	information_schema. "columns"
 WHERE
 	table_schema = 'public'
-	AND "table_name" in(
+	AND "table_name" IN(
 		SELECT
 			table_name FROM information_schema. "tables"
 		WHERE
 			table_schema = 'public')`)
-    return res
-  } catch (error) {}
+    return res.rows
+  } catch (error) {
+    console.log(error)
+  }
 }
 
-getDatabaseSchemas().then(d => console.log(d.rows))
+module.exports = { getDatabaseSchemas }
