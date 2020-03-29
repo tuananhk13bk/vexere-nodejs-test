@@ -13,21 +13,18 @@ async function getDatabaseSchemas(dbName) {
     await client.connect()
 
     const res = await client.query(`SELECT
-  "table_schema",
-	"table_name",
-	"column_name",
-	data_type,
-	is_nullable,
-	column_default
+	*
 FROM
 	information_schema. "columns"
 WHERE
 	table_schema = 'public'
-	AND "table_name" IN(
+	AND "table_name" in(
 		SELECT
 			table_name FROM information_schema. "tables"
 		WHERE
-			table_schema = 'public')`)
+			table_schema = 'public')
+ORDER BY
+	"table_name"`)
     return res.rows
   } catch (error) {
     console.log(error)
