@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "vexere-nodejs-test",
+  "private_key_id": "4942cf3016d0554d9f60b453bf38580b59678335",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC0IVwR+zroPBrs\nLiXBDPsOs/+nNE+vsdjxeZKkubre/U5iRTleB7cjadKmbyrKsAu3GaCM9Qnqw7hk\nPDmNzQ1wsxXphI5U6CXpUSGLWdb9PZsk86LKDxpWVz3NDSwZ1fjG4PUFXptVvu2O\nyQ66/GGLoBFVQki29zWVPpWHjdmcLYekGystXWKydtz8pELMkrFeHRoDmRgHdZvf\nWlpS3zaJoDNDZFLLlztjyGaN74jsd3lcfunfv0RD0VlmMTaZr3VDlgm5dtuvLzhz\nWAiGV8lN5yrxXqqpcZd9u2NFtVMfW2AXy4g5eMbV3YNe/HDqnHU5hsY8bjSBcIBZ\nl/qArbO9AgMBAAECggEAVlMMbCOhqe0wG9LLzhY59ORnVwq3S6RoKuVP1TibKUVs\nvKSfJwR8jHCo/pEVCVjP7HpQGm1OSN9uLT89d8r2r3VrwWMA0QkGLifu8vjlkqxk\n/xLxh3MwdINPv0aaRXFpTWo+kkmyGKgs8bpCIHNWDhNyaxEehuy3FaSOBY4B5RmQ\niKn68UYLWwalfWOb0zYXewmADVOOgewMxWxCNZ3ZaZB7fjjW/a6cpmfUgtaah/rp\n388KdK/FUlcQzaK35wiMhAknffUVZBT61phoVY0ADaTW/Ds8Wa7xQBruzukpdxO0\nGqye7ExOZx5ZO0Ct815ycmDGRApJXj+tuNlykikCowKBgQDke+MEi8/ZWZx42TVa\nXydLiWJXjZKC1/89e8LFr1GfTrZwbX8vEBUsIlT3mAL1YCa0prX+JS3nGGskS6rH\nOI1WlCEiFx4BKSE1edgDOOSu60OCQdRLl5kXoqL2OfvHcXqbGUNz5cwFKCbS50vc\nesmUkULLeFGepfjFsQNLgIBrswKBgQDJ0r2Tlh8O0mdWNEGEjTVzCM9bM9j2okaY\nN0iRkBvMsmDAdkHzzgvlpzo/TQQJKDPI8EjhQ+WRI44OXV7i8felID5d5iZfQ5wH\nodr2Ck/VTARs83waPncshkePMgKItuMxY+gjHxZZntcZPiH9dPnYM78QvxxTRraJ\nScWhaYfqzwKBgHs/uL4DDSOZiyZFRNpy6ad9fGbuH1IlYbGwyOgKImVk+FS9PBYO\n/tzHyD2m6jGipD5ej12AgLpgGauChaThhJxnW1ggUDcgEKHgD/3s+q7AibICAJqm\nNBbjzDQ2IvL668AuaIxkMSG2/vpVej58nbBei0FmreB+dytsyPI5ZwyxAoGASW86\nt4a6CkSYgQ9Gf5p5xj+AY2j8GtF06lHDP+O1mceV2LGu0a05OvicAwhc3ZAZN5Xm\njsCLuUG8oJFswxrTxutyhewGLkeFcGl+KGQcJDoiqhn2H/52kmbRhtLlhSU2iXQW\ntSDMmxNmpLKs33I+rmI1tTw0bECgjlefZ1nksJUCgYAWTCwlEQFvLFyw1JpH5LSU\n2m2n3WHuLraZJK1M/VkKZaBzt7CR8dIwWgBHi5peTIW/1xcypEn0U/lpw0R8XqVG\nSOjZNxEp0d0Z3whyifZGgetvwJUzQk8tehuIkLwg88CGGAg8TPXvTJR8zZ5atzKD\nKYIhab86KcxiiFL7yFkKmg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "sheets-44@vexere-nodejs-test.iam.gserviceaccount.com",
+  "client_id": "104217222658882944828",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sheets-44%40vexere-nodejs-test.iam.gserviceaccount.com"
+}
